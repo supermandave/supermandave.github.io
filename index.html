@@ -9,13 +9,13 @@
 <body>
   <div id="body-container">
     <div id="header">
-      <h1>Hello, my name is David Mills!</h1>
+      <script src="javascript/external.js"></script>
     </div>
     <div id="profile-picture">
       <img src=images/profile-picture.jpg width=500px height=500px />
     </div>
     <div id="welcome-text">
-      Welcome to my webpage.<br>
+      My name is David Mills.<br>
       I am a student in the
       <a href="https://www.geo.txstate.edu">Geography Department</a> at
       <a href="https://txstate.edu">Texas State University</a>.
@@ -27,7 +27,13 @@
         <li>Machine Learning</li>
         <li>Spatio-Temporal Analysis</li>
       </ol>
-      <script src="javascript/external.js"></script>
+    </div>
+    <div id="copyright">
+      <script>
+      var today = new Date();
+      var year = today.getFullYear();
+      document.writeln("Copyright &copy; " + year);
+      </script>
     </div>
   </div>
 </body>

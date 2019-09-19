@@ -5,17 +5,6 @@ const out = x + y;
 document.write(out);
 */
 
-document.writeln("<button onclick='condition()'>Conditional Test</button>")
-
-function condition()
-{
-  x = confirm("Are you sure you want to proceed?");
-  if(x)
-  {
-    document.writeln("You chose Okay!");
-  }
-  else
-  {
-    document.writeln("You chose Cancel!");
-  }
-}
+// A prompt box is used to prompt users to input a value before entering a page.
+user_name = window.prompt("Please enter your name", "Type your name here");
+document.write("<h1>Hello, welcome to my webpage, " + user_name + "!</h1>");
