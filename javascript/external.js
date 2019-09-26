@@ -31,7 +31,12 @@ function webmap_table()
     document.write("<tr>");
     for (var column=0; column < webmaps[0].length; column++)
     {
-      document.write("<td>" + webmaps[row][column] + "</td>");
+      if (column < 2)
+      {
+        document.write("<td>" + webmaps[row][column] + "</td>");
+      } else {
+        document.write("</tr><tr><td colspan='2'>" + webmaps[row][column] + "<p></td></tr><tr>");
+      }
     }
     document.write("</tr>");
   }
