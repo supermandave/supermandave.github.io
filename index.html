@@ -6,6 +6,18 @@
   file -->
   <link rel="stylesheet" type="text/css" href="css/main_style.css">
   <script src="javascript/external.js"></script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+  inegrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+  crossorigin="">
+  </script>
 </head>
 <body>
   <div id="body-container">
@@ -35,6 +47,17 @@
       <h3>Webmap Reviews</h3>
       <script>
       webmap_table();
+      </script>
+    </div>
+    <h3>My First Webmap</h3>
+    <div id="mapid" style="width: 600px; height: 400px; margin: auto;">
+    <script>
+      var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        maxZoom: 18,
+        id: 'mapbox.streets',
+        accessToken: 'pk.eyJ1Ijoic3VwZXJtYW5kYXZlIiwiYSI6ImNrMWF6cXVhYzA3bDAzaW5zcWF6eDd3cjMifQ.AqyyHTFUulCOKPUvBH0hUQ'
+      }).addTo(mymap);
       </script>
     </div>
     <div id="copyright">
