@@ -1,7 +1,7 @@
 var mymap = L.map('mapid');
 
 var options = {
-  key: '19282d4d5d924889bb832b9f9ca05358',
+  key: geocoder_api_key,
   limit: 10
 };
 var control = L.Control.openCageSearch(options).addTo(mymap);
@@ -10,7 +10,7 @@ var control = L.Control.openCageSearch(options).addTo(mymap);
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
   maxZoom: 18,
   id: 'mapbox.mapbox-traffic-v1',
-  accessToken: 'pk.eyJ1Ijoic3VwZXJtYW5kYXZlIiwiYSI6ImNrMWF6cXVhYzA3bDAzaW5zcWF6eDd3cjMifQ.AqyyHTFUulCOKPUvBH0hUQ'
+  accessToken: mapbox_access_token
 }).addTo(mymap);
 */
 
